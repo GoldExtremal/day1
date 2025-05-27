@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico">
     <title>AeroVision</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="logo">
+            <img class="logo__img" src="img/logo.svg" alt="logo">
+            <p class="logo__txt">AeroVision</p>
+        </div>
+
+        <input id="burger-toggle" type="checkbox">
+        <label for="burger-toggle">
+            <span></span>
+        </label>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li> <a class="nav__item" href="https://www.google.com/search?q=Home">Home</a></li>
+                <li> <a class="nav__item" href="https://img.freepik.com/free-vector/colourful-clown-cartoon-character_1308-99120.jpg?semt=ais_hybrid&w=740">About Me</a></li>
+                <li> <a class="nav__item" href="https://www.google.com/search?q=Services">Services</a></li>
+                <li> <a class="nav__item" href="https://habr.com/ru/articles/">Blog</a></li>
+                <li> <a class="nav__item" href="https://github.com/GoldExtremal">Contact Me</a></li>
+            </ul>
+            
+            <button class="nav__btn btn" type="submit" onclick="document.location=`http:\//t.me/GoldExtremal`">Let's chat</button>
+        </nav>
+    </header>
 </body>
+
 </html>

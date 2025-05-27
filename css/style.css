@@ -1,0 +1,287 @@
+* {
+    font-family: "Work Sans", sans-serif;
+}
+
+.header {
+    margin-top: 20px;
+    padding: 15px 65.5px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    width: 50px;
+    margin-right: 6px;
+}
+
+.logo__txt {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60.610687022%;
+    height: inherit;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 64.735516372%;
+}
+
+.nav__item {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.nav__item:hover {
+    font-size: 22px;
+}
+
+.btn {
+    border-radius: 50px;
+    background-color: #0077FF;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav__btn {
+    width: 20.151133501%;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    .header {
+        margin-top: 16.67px;
+        padding: 12.5px 54.58px;
+        height: 41.67px;
+    }
+
+    .logo__img {
+        width: 41.67px;
+        margin-right: 5px;
+    }
+
+    .logo__txt {
+        font-size: 20.83px;
+    }
+
+    .nav__item {
+        font-size: 15px;
+    }
+
+    .nav__item:hover {
+        font-size: 18.33px;
+    }
+
+    .btn {
+        font-size: 16.67px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        margin-top: 14.2px;
+        padding: 10.65px 46.51px;
+        height: 35.56px;
+    }
+
+    .logo__img {
+        width: 35.56px;
+        margin-right: 4.27px;
+    }
+
+    .logo__txt {
+        font-size: 17.78px;
+    }
+
+    .nav__item {
+        font-size: 12.8px;
+    }
+
+    .nav__item:hover {
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 14.2px;
+    }
+}
+
+/* Бургер-меню для мобильной версии */
+
+#burger-toggle {
+    display: none;
+}
+
+.header>label {
+    display: none;
+}
+
+@media (max-width: 820px) {
+    .header>label {
+        position: relative;
+        height: 24px;
+        width: 31.995px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    .header>label::before,
+    .header>label span,
+    .header>label::after {
+        height: 2.25px;
+        background-color: #141B34;
+        transition: .5s;
+    }
+    
+    .header>label::before {
+        width: 75%;
+        content: "";
+    }
+
+    .header>label span {
+        width: 100%;
+        display: block;
+    }
+
+    .header>label::after {
+        width: 50%;
+        content: "";
+    }
+
+    #burger-toggle:checked ~ label {
+        justify-content: center;
+    }
+
+    #burger-toggle:checked ~ label::before {
+        transform: rotate(-225deg);
+        width: 100%;
+        position: absolute;
+    }
+    
+    #burger-toggle:checked ~ label span {
+        transform: rotate(-225deg);
+        position: absolute;
+    }
+
+    #burger-toggle:checked ~ label::after {
+        transform: rotate(225deg);
+        width: 100%;
+        position: absolute;
+    }
+}
+
+/* -------------------------------- */
+
+@media (max-width: 820px) {
+    .header {
+        margin: 0;
+        padding: 2.3% 2.57%;
+        height: 72px;
+    }
+
+    .logo {
+        z-index: 1;
+    }
+
+    .logo__img {
+        width: 45px;
+    }
+
+    .logo__txt {
+        font-size: 25px;
+    }
+
+    .nav {
+        transition: .5s;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        top: -200vh;
+        backdrop-filter: blur(1px);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav__item {
+        font-size: 25px;
+        line-height: 2;
+    }
+
+    .nav__item:active,
+    .nav__item:focus,
+    .nav__item:hover {
+        font-size: 25px;
+        line-height: 2;
+    }
+
+    .nav__btn {
+        font-size: 25px;
+        padding: 10px;
+        margin-top: 20px;
+        height: auto;
+        width: 200px;
+    }
+
+    #burger-toggle:checked ~ .nav {
+        top: 0;
+    }
+}
+
+@media (max-width: 584px) {
+    .header {
+        height: 48px;
+    }
+
+    .header>label {
+        height: 16px;
+        width: 21.33px;
+    }
+
+    .header>label::before,
+    .header>label span,
+    .header>label::after {
+        height: 1.5px;
+    }
+
+    .logo__img {
+        width: 30px;
+    }
+
+    .logo__txt {
+        font-size: 20px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
